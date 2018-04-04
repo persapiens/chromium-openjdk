@@ -1,14 +1,9 @@
-FROM persapiens/openjdk:8u162
+FROM alpine:edge
 MAINTAINER Marcelo Fernandes <persapiens@gmail.com>
 
-# install headless gui tools, chromium and create chromium folders
-RUN apt-get update -qqy && \
-  apt-get upgrade -qqy --no-install-recommends && \
-  apt-get install -qqy xvfb dbus-x11 fonts-ipafont-gothic xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic && \
-  apt-get install -qqy chromium-browser && \
-  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/* && \
-  mkdir /.config /.cache /.local /.gnome /.pki && \
-  chmod 777 /.config /.cache /.local /.gnome /.pki
+# install openjdk8, headless gui tools, bash, chromium
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
+  apk add --no-cache --update openjdk8 ttf-dejavu xvfb dbus bash chromium
 
 # install chrome launch script modification
 ADD xvfb-chromium /usr/bin/xvfb-chromium
