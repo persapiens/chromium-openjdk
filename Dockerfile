@@ -1,4 +1,4 @@
-FROM persapiens/openjdk:8u151
+FROM persapiens/openjdk:8u162
 MAINTAINER Marcelo Fernandes <persapiens@gmail.com>
 
 # install headless gui tools, chromium and create chromium folders
