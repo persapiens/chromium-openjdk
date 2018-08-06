@@ -1,9 +1,9 @@
 FROM alpine:edge
 MAINTAINER Marcelo Fernandes <persapiens@gmail.com>
 
-# install openjdk8, headless gui tools, bash, chromium
+# install openjdk8, headless gui tools, bash, chromium, procps
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
-  apk add --no-cache --update openjdk8 ttf-dejavu xvfb dbus bash chromium
+  apk add --no-cache --update openjdk8 ttf-dejavu xvfb dbus bash chromium procps
 
 # install chrome launch script modification
 ADD xvfb-chromium /usr/bin/xvfb-chromium
