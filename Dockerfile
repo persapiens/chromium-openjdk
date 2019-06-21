@@ -1,7 +1,7 @@
 FROM alpine:edge
 MAINTAINER Marcelo Fernandes <persapiens@gmail.com>
 
-# install openjdk8, headless gui tools, bash, chromium, procps
+# install openjdk11, headless gui tools, bash, chromium, procps
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
   apk add --no-cache --update openjdk11 ttf-dejavu xvfb dbus bash chromium procps
 
