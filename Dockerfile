@@ -1,9 +1,8 @@
-FROM alpine:edge
+FROM persapiens/openjdk:11u4-alpine
 MAINTAINER Marcelo Fernandes <persapiens@gmail.com>
 
-# install openjdk11, headless gui tools, bash, chromium, procps
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
-  apk add --no-cache --update openjdk11 ttf-dejavu xvfb dbus bash chromium procps
+# install headless gui tools, bash, chromium
+RUN apk add --no-cache --update xvfb dbus bash chromium 
 
 # install chrome launch script modification
 ADD xvfb-chromium /usr/bin/xvfb-chromium
