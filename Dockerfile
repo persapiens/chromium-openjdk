@@ -1,4 +1,4 @@
-FROM persapiens/openjdk:8u212-alpine
+FROM persapiens/openjdk:8u222-alpine
 MAINTAINER Marcelo Fernandes <persapiens@gmail.com>
 
 # install headless gui tools, bash, chromium
