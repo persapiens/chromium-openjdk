@@ -1,5 +1,6 @@
-FROM persapiens/openjdk:8u212-alpine
-MAINTAINER Marcelo Fernandes <persapiens@gmail.com>
+FROM adoptopenjdk/openjdk8:jdj8u252-b09-alpine
+
+LABEL MAINTAINER="Marcelo Fernandes <persapiens@gmail.com>"
 
 # install headless gui tools, bash, chromium
 RUN apk add --no-cache --update xvfb dbus bash chromium 
