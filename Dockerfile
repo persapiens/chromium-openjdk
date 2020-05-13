@@ -1,5 +1,6 @@
 FROM persapiens/openjdk:11u4-alpine
-MAINTAINER Marcelo Fernandes <persapiens@gmail.com>
+
+LABEL MAINTAINER="Marcelo Fernandes <persapiens@gmail.com>"
 
 # install headless gui tools, bash, chromium
 RUN apk add --no-cache --update xvfb dbus bash chromium 
