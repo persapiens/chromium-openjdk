@@ -1,4 +1,4 @@
-FROM adoptopenjdk:11.0.7_10.1-jdk-hotspot
+FROM adoptopenjdk/openjdk11:jdk-11.0.7_10
 
 LABEL MANTAINER="Marcelo Fernandes <persapiens@gmail.com>"
 
